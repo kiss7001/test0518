@@ -1,6 +1,6 @@
-# md-to-toc #
+# 마크다운 사용템플릿 #
 
-md-to-toc is a python script that parses a markdown file and outputs a table of contents as a markdown list.
+이 페이지는 깃허브 마크다운으로 문서작성샘플을 기록합니다.
 
 Advantages:
 - Doesn't require an internet connection
