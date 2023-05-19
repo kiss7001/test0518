@@ -11,14 +11,14 @@ Disadvantages:
 - Uses my best guess at GitHub's algorithm to determine anchor names for header strings. Works for my use cases, but may not cover all cases. If it doesn't work for you, please let me know!
 
 
-## Usage ##
+## 사용방법 ##
 
 - Install Python 2.7 (haven't tested with other versions)
 - Run ```md-to-toc <markdown_file>```
 - Copy output to your markdown file
 
 
-## Example ##
+## 예시 ##
 
 Given test.md:
 
@@ -86,6 +86,6 @@ $ python md-to-toc.py test2.md
 ```
 
 
-## Alternatives ##
+## 대안 ##
 
 [github-markdown-toc](https://github.com/ekalinin/github-markdown-toc) is a bash script that uses GitHub's API to convert a markdown file to HTML, then parses the HTML to produce the table of contents. This script is more robust than md-to-toc because it parses out the anchors directly from HTML, while md-to-toc converts the header titles to anchors using my best guess at GitHub's algorithm. On the other hand, github-markdown-toc requires an internet connection.
