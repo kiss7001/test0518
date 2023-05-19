@@ -3,7 +3,7 @@
 이 페이지는 깃허브 마크다운으로 문서작성샘플을 기록합니다.
 
 Advantages:
-- Doesn't require an internet connection
+- 하하하
 - Works on any markdown file (doesn't need to be on a public GitHub repo)
 - Fast
 
