@@ -1,28 +1,91 @@
-## 목차
+# md-to-toc #
 
-1. [깨끗한 코드](#1장.-깨끗한-코드)
-2. [의미 있는 이름](#2장.-의미-있는-이름)
+md-to-toc is a python script that parses a markdown file and outputs a table of contents as a markdown list.
 
-  
+Advantages:
+- Doesn't require an internet connection
+- Works on any markdown file (doesn't need to be on a public GitHub repo)
+- Fast
 
----
+Disadvantages:
+- Uses my best guess at GitHub's algorithm to determine anchor names for header strings. Works for my use cases, but may not cover all cases. If it doesn't work for you, please let me know!
 
-## 1장. 깨끗한 코드
 
-### 보이스카우트 규칙
+## Usage ##
 
-* 코드는 잘 짜기만 했을 때 끝나는 것이 아닌, 시간이 지나도 언제나 깨끗하게 유지해야 한다.
-* 보이스카우트 규칙  
-  ` 캠프장은 처음 왔을 때보다 더 깨끗하게 해놓고 떠나라.`
+- Install Python 2.7 (haven't tested with other versions)
+- Run ```md-to-toc <markdown_file>```
+- Copy output to your markdown file
 
----
 
-## 2장. 의미 있는 이름
+## Example ##
 
-### 의도를 분명히 밝혀라
+Given test.md:
 
-이름을 지을 때 아래의 질문들을 고려해야 한다.
+```
+# Header1
+Some text
 
-* 변수(혹은 함수나 클래스)의 존재 이유는?
-* 수행 기능은?
-* 사용 방법은?
+## Header2
+Some more text
+
+## Header2 again
+Even more text
+
+### Header3
+
+#### Header4
+
+##### Header5
+
+###### Header6
+
+# Header1
+
+## Header2
+
+## Header2 again
+```
+
+Run md-to-toc:
+
+```bash
+$ python md-to-toc.py test.md
+- [Header1](#header1)
+  - [Header2](#header2)
+  - [Header2 again](#header2-again)
+    - [Header3](#header3)
+      - [Header4](#header4)
+        - [Header5](#header5)
+          - [Header6](#header6)
+- [Header1](#header1-1)
+  - [Header2](#header2-1)
+  - [Header2 again](#header2-again-1)
+```
+
+One cute feature is that if your file doesn't start with header level 1, leading spaces will be removed so that the output is flush with the left edge:
+
+test2.md:
+
+```
+### Header3
+
+#### Header4
+
+##### Header5
+
+###### Header6
+```
+
+```bash
+$ python md-to-toc.py test2.md
+- [Header3](#header3)
+  - [Header4](#header4)
+    - [Header5](#header5)
+      - [Header6](#header6)
+```
+
+
+## Alternatives ##
+
+[github-markdown-toc](https://github.com/ekalinin/github-markdown-toc) is a bash script that uses GitHub's API to convert a markdown file to HTML, then parses the HTML to produce the table of contents. This script is more robust than md-to-toc because it parses out the anchors directly from HTML, while md-to-toc converts the header titles to anchors using my best guess at GitHub's algorithm. On the other hand, github-markdown-toc requires an internet connection.
