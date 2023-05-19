@@ -77,6 +77,19 @@ test2.md:
 ###### Header6
 ```
 
+
+|UserID (align right)|Name (align left)|Group (align center)|
+|2                   |John Smith       |                    |
+|3                   |Dave Lopper      |A Team              |
+|4                   |Robert Hill      |B Team              |
+
+```
+|UserID (align right)|Name (align left)|Group (align center)|
+|2                   |John Smith       |                    |
+|3                   |Dave Lopper      |A Team              |
+|4                   |Robert Hill      |B Team              |
+```
+
 ```bash
 $ python md-to-toc.py test2.md
 - [Header3](#header3)
