@@ -2,6 +2,8 @@
 
 이 페이지는 깃허브 마크다운으로 문서작성샘플을 기록합니다.
 
+https://kiss7001.github.io/test0518/ 로 접속이 가능합니다.
+
 Advantages:
 - 하하하
 - Works on any markdown file (doesn't need to be on a public GitHub repo)
