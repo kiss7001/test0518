@@ -78,16 +78,17 @@ test2.md:
 ```
 
 
-|UserID (align right)|Name (align left)|Group (align center)|
-|2                   |John Smith       |                    |
-|3                   |Dave Lopper      |A Team              |
-|4                   |Robert Hill      |B Team              |
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 
 ```
-|UserID (align right)|Name (align left)|Group (align center)|
-|2                   |John Smith       |                    |
-|3                   |Dave Lopper      |A Team              |
-|4                   |Robert Hill      |B Team              |
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 ```
 
 ```bash
